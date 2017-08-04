@@ -28,7 +28,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('net.sourceforge.nekohtml:nekohtml')
-	compile group: 'org.postgresql', name: 'postgresql', version: '9.4-1200-jdbc41'
+	compile('org.postgresql:postgresql')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

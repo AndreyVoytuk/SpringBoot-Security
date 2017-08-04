@@ -1,14 +1,10 @@
 package com.springBootAuth.springBootAuthorization.model;
 
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,20 +18,8 @@ public class Role {
 	@Column(name = "role")
 	private String role;
 
-	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
-	private Set<User> users;
-
 	public Role() {
 	}
-
-	public Set<User> getUsers() {
-		return users;
-	}
-
-	public void setUsers(Set<User> users) {
-		this.users = users;
-	}
-
 	public int getId() {
 		return id;
 	}

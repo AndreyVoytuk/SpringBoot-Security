@@ -54,7 +54,7 @@ public class LoginController {
 			modelAndView.addObject("successMessage",
 					"User has been registered successfully");
 			modelAndView.addObject("user", new User());
-			modelAndView.setViewName("registration");
+			modelAndView.setViewName("home");
 		}
 
 		return modelAndView;
@@ -66,7 +66,7 @@ public class LoginController {
 		Authentication authentication = SecurityContextHolder.getContext()
 				.getAuthentication();
 		User user = userService.findByUserEmail(authentication.getName());
-		modelAndView.addObject("userName", "Welcome" + user.getName() + " "
+		modelAndView.addObject("userName", "Welcome " + user.getName() + " "
 				+ user.getLastName() + " (" + user.getEmail() + ")");
 		modelAndView.addObject("adminMessage",
 				"Content Available Only for Users with Admin Role");
